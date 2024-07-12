@@ -1,10 +1,13 @@
 # containers_hw
 
-Tested on ALSE 1.7.5 Base
+This script is tested on ALSE 1.7.5 Base
 
 **Install instructions**
 
-With wget:
+1) Run the script 
+   with wget:
 ```
 wget -O install.sh https://raw.github.com/hatefastfood/containers_hw/main/install.sh && sudo bash install.sh
 ```
+
+2) Navigate to http://container_ip/zabbix
