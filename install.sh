@@ -7,7 +7,7 @@ apt update && apt install -y lxc lxc-astra
 lxc-create -t astralinux-se -n astra && lxc-start -n astra && echo "sleeping for 5 seconds…" && sleep 5 && echo "completed"
 
 # Ставим zabbix+postrgesql в контейнер
-lxc-attach -n astra -- apt install -y zabbix-server-pgsql zabbix-frontend-php php-pgsql acl
+lxc-attach -n astra -- apt install -qy zabbix-server-pgsql zabbix-frontend-php php-pgsql acl
 
 # Настраиваем работу с МКЦ, МРД (специфика Астры), даём необходимые права
 lxc-attach -n astra -- bash -c "pdpl-user -l 0:0 -i 63 postgres && pdpl-user -l 0:0 zabbix"
